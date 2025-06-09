@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Village Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .village-info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .village-info h2 {
+            color: #333;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Village</h1>
+    </header>
+    <div class="container">
+        <div class="village-info">
+            <h2>About Our Village</h2>
+            <p>
+                [HIBBHATTI] is a serene and picturesque village located in [GADCHIROLLI]. Known for its lush greenery, vibrant culture, and close-knit community, it offers a glimpse into traditional rural life. The village is famous for [mention notable features, e.g., festivals, landmarks, or history].
+            </p>
+            <p>
+                <strong>Population:</strong> [500]<br>
+                <strong>Main Occupation:</strong> [ Agriculture,]<br>
+                <strong>Notable Attractions:</strong> [ Ancient river, Scenic Lake]<br>
+            </p>
+        </div>
+        <div class="gallery">
+            <img src="photos/photo1.jpg" alt="Village Scenery">
+            <img src="photos/photo2.jpg" alt="Village Festival">
+            <img src="photos/photo3.jpg" alt="Village Landmark">
+            <img src="photos/photo4.jpg" alt="Community Event">
+        </div>
+    </div>
+    <script>
+        // Optional: Add interactivity, e.g., alert when clicking an image
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                alert(`Clicked on ${img.alt}`);
+            });
+        });
+    </script>
+</body>
+</html>
